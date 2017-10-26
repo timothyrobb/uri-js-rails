@@ -1,5 +1,7 @@
 # -*- encoding: utf-8 -*-
-require File.expand_path('../lib/uri-js-rails/version', __FILE__)
+$:.push File.expand_path('../lib', __FILE__)
+
+require 'uri-js-rails/version'
 
 Gem::Specification.new do |gem|
   gem.name          = "uri-js-rails"
