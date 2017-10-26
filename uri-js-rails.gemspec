@@ -1,7 +1,5 @@
 # -*- encoding: utf-8 -*-
-lib = File.expand_path('../lib', __FILE__)
-# $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'uri-js-rails/version'
+lib = File.expand_path('../lib/uri-js-rails/version', __FILE__)
 
 Gem::Specification.new do |gem|
   gem.name          = "uri-js-rails"
