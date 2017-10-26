@@ -1,6 +1,6 @@
 # -*- encoding: utf-8 -*-
 lib = File.expand_path('../lib', __FILE__)
-$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
+# $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'uri-js-rails/version'
 
 Gem::Specification.new do |gem|
@@ -12,8 +12,8 @@ Gem::Specification.new do |gem|
   gem.summary       = %q{URI.js for rails}
   gem.homepage      = ""
 
-  gem.files         = `git ls-files`.split($/)
-  gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
+  gem.files         = `git ls-files`.split("\n")
+  gem.executables   = `git ls-files -- bin/*`.split("\n").map { |f| File.basename(f) }
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
-  gem.require_paths = ["lib"]
+  gem.require_path = 'lib'
 end
